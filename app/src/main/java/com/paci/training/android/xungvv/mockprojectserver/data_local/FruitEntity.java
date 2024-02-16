@@ -7,7 +7,7 @@ import java.util.List;
 
 public class FruitEntity {
     public static List<Fruit> getFruits(){
-        List<Fruit> list = new ArrayList<>();
+        List<Fruit> list = new ArrayList<>();   
         list.add(new Fruit(1, "Tomato", "It includes seeds, the tomato is technically a fruit, contrary to popular belief. They are grown in more significant quantities than any other fruit, with over 170 million tons produced worldwide each year. Additionally, Tomatoes are low in calories and high in vitamins C and K, potassium, folate, and an antioxidant called lycopene."));
         list.add(new Fruit(2, "Banana", "Bananas are also one of the most popular fruits in the world. Almost 150 million bananas are produced (predominantly in India and China). Additionally, bananas, first and foremost, are abundant in potassium, which may help avoid strokes, high blood pressure, and heart disease."));
         list.add(new Fruit(3, "Apple", "Apples are grown mainly in China, the United States, Europe, and Turkey and are among the most popular fruits in the world. Every year, around 76 million tons are manufactured around the world. Additionally, Apple flavonoids such as quercetin, kaempferol, and catechin have antioxidant characteristics that can help protect against chronic illnesses like cancer, heart disease, and diabetes."));

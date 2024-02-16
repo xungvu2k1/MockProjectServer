@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
 
+import com.paci.training.android.xungvv.mockprojectserver.data_local.FruitEntity;
+import com.paci.training.android.xungvv.mockprojectserver.model.Fruit;
+
 public class FruitDetailService extends Service {
     private final String TAG = "aidlService";
     public FruitDetailService() {
@@ -15,7 +18,12 @@ public class FruitDetailService extends Service {
         return new IMyAidlInterface.Stub() {
             @Override
             public String getFruitDetail(String fruitName) throws RemoteException {
-                return null;
+                for (Fruit fruit : FruitEntity.getFruits()){
+                    if(fruit.getName().equals(fruitName)){
+                        return fruit.getDetail();
+                    }
+                }
+                return "Invalid fruit name";
             }
         };
     }
